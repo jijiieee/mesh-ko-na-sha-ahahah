@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanong ng Sambayanan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="errorMsg">Ouch! Ayaw mo talaga? Ok 'di naman masakit ih. haha</div>
+
+  <div class="container" id="questionContainer">
+    <div id="mainBlock" class="card">
+      <h2>Ako pa ba?</h2>
+      <div class="btn-group">
+        <button id="yesBtn" class="yes-btn">Yes</button>
+        <button id="noBtn" class="no-btn">No</button>
+      </div>
+    </div>
+
+    <div id="subBlock" class="hidden">
+      <div class="sub-question hidden">
+        <p>Wehhhh?</p>
+        <div class="btn-group">
+          <button class="sub-yes yes-btn">Yes</button>
+          <button class="sub-no no-btn">No</button>
+        </div>
+      </div>
+      <div class="sub-question hidden">
+        <p>Ung totoo???</p>
+        <div class="btn-group">
+          <button class="sub-yes yes-btn">Yes</button>
+          <button class="sub-no no-btn">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loader" class="hidden">Wait process ko muna. . .</div>
+
+  <div id="videoBox" class="hidden">
+    <video id="song" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+ 
+<p class="ref">Inspired by <a href="https://www.facebook.com/the.coding.wizards" target="_blank" class="link">the_coding_wizard &#10004;</a></p>
+ 
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

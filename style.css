@@ -1,0 +1,187 @@
+*{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: "Poppins",sans-serif;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#ffdde1,#ee9ca7,#ff758c,#ff416c);
+      background-size:300% 300%;
+      animation: bgShift 8s ease infinite;
+      color:#fff;
+      flex-direction:column;
+      overflow:hidden;
+      position:relative;
+    }
+    @keyframes bgShift{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    .container {
+      position: relative;
+      width:420px;
+      min-height:200px;
+      background:rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:20px;
+      backdrop-filter:blur(8px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    h2{
+      font-size:2rem;
+      margin-top: 25px;
+      margin-bottom:18px;
+      text-shadow:0 2px 8px rgba(0,0,0,0.18);
+      text-align:center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .btn-group{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:center;
+      margin-top:6px;
+      position:relative;
+    }
+    button{
+      padding:10px 24px;
+      border-radius:28px;
+      border:none;
+      font-weight:700;
+      cursor:pointer;
+      font-size:1rem;
+      user-select:none;
+      position:relative;
+      transition:all .25s ease;
+    }
+    button:active{ transform:scale(.98) }
+
+    .no-btn {
+      background:#ffb6c1;
+      color:#fff;
+      box-shadow:0 8px 20px rgba(255,182,193,0.25);
+      transition: none; /* No transition for instant movement */
+    }
+
+    .yes-btn {
+      background:#ff4e78;
+      color:white;
+      box-shadow:0 8px 20px rgba(255,78,120,0.25);
+    }
+    .yes-btn:hover { transform:scale(1.06) }
+    .no-btn:hover { transform:scale(1.03) }
+
+    .hidden{ 
+      display:none !important;
+    }
+    
+    #loader{ 
+      margin-top:18px; 
+      font-size:1.1rem;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    #errorMsg {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff8aa5;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 5px 15px rgba(143, 64, 64, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+
+    #videoBox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 50%;
+      transition: opacity 2s ease-in-out;
+      z-index: 9999;
+    }
+    
+    #videoBox.show {
+      opacity: 1;
+    }
+
+    #song {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .ref {
+      position: fixed;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.92);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      z-index: 100;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .link {
+      color: rgba(255, 255, 255, 0.92);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .sub-question {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .sub-question p {
+      font-size:2rem;
+      margin-top: 25px;
+      margin-bottom:18px;
+      text-shadow:0 2px 8px rgba(0,0,0,0.18);
+      text-align:center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    #errorMsg.final-message {
+      font-size: 3rem;
+      padding: 30px 50px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+      background: rgba(255, 0, 100, 0.95);
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(255, 0, 100, 0.5);
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      max-width: 80vw;
+      animation: heartbeat 1s ease-in-out infinite;
+    }
