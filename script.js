@@ -4,7 +4,7 @@
       window.addEventListener('load', () => {
   // Check if the device is likely mobile
   if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    alert('Better experience on desktop/laptop. hihu\nMedjo kailangan din ng good net hihu');
+    alert('Better experience on desktop/laptop. hihu Medjo kailangan din ng good net hihu');
   }
 });
 
